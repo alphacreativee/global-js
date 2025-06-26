@@ -38,7 +38,7 @@ const sampleData = {
     },
     {
       properties: {
-        name: "Vietnam",
+        name: "VietNam",
         latitude: 14.0583,
         longitude: 108.2772,
         pop_max: 97470000,

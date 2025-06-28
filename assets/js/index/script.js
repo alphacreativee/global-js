@@ -159,20 +159,21 @@ function initGlobe(places) {
     return;
   }
 
+  // globe = Globe()(globeContainer)
+  //   .globeImageUrl(
+  //     "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
+  //   )
+  //   .backgroundImageUrl(
+  //     "//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png"
+  //   );
   globe = Globe()(globeContainer)
     .globeImageUrl(
       "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
     )
     .backgroundImageUrl(
       "//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png"
-    );
-  globe = Globe()(globeContainer)
-    .globeImageUrl(
-      "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg"
     )
-    .backgroundImageUrl(
-      "//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png"
-    )
+    .atmosphereColor("white")
     .htmlElementsData(places.features) // Use HTML elements instead of labels
     .htmlLat((d) => d.properties.latitude)
     .htmlLng((d) => d.properties.longitude)
